@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background-image: url('../imgs/ceu.png');
+    background-size: cover;
+    overflow: hidden; /*Esconde o que sai*/
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    border-radius: 10px;
+    left: calc(50% - 30px);
+    bottom: 50%;
+    z-index: 1;
+}
+
+.par-de-barreiras {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top:0;
+    height: 100%;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient( 100deg, rgb(2, 67, 87), rgb(94, 202, 245));
+    border: 2px solid black;
+}
+
+.barreira .corpo {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient( 100deg, rgb(2, 67, 87), rgb(94, 202, 245));
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 1;
+
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <link rel="stylesheet" href="./CSS/flappy.css">
+</head>
+<body class="conteudo">
+    <h1>Flappy Bird</h1>
+    <div wm-flappy></div>
+    
+    <audio id="player" autoplay="autoplay" controls="controls" style="display:none;">
+        <source src="./audio/po.mp4" type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    
+    <script src="./js/flappy.js"></script>
+    <script>
+        window.onkeypress = e => document.getElementById('player').play()
+    </script>
+</body>
+</html>
