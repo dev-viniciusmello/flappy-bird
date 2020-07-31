@@ -107,9 +107,18 @@ function Passaro(alturaJogo) {
 
     this.setY = y => this.elemento.style.bottom = `${y}px`
     
-    window.onkeydown = (e) => voando = true
+    window.onkeydown = (e) => {
+        document.getElementById('player').play()
+        voando = true  
+    }
+
     window.onkeyup =   (e) => voando = false
-    window.ontouchstart = (e) => voando = true
+    
+    window.ontouchstart = (e) =>  {
+        document.getElementById('player').play()
+        voando = true  
+    }
+    
     window.ontouchend = (e) => voando = false
     
     this.animar = () => {
